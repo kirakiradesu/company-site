@@ -60,9 +60,9 @@
 
     &__img{
         text-align: center;
-        @include respond-to("md") {
-            text-align: unset;
-        }
+        // @include respond-to("md") {
+        //     text-align: unset;
+        // }
     }
 }
 .game-item{
