@@ -1,0 +1,50 @@
+.contacts{
+    height: auto;
+    @include respond-to("xl"){
+        height: 100%;
+    }
+}
+.contacts-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    row-gap: 70px;
+    column-gap: 80px;
+    height: 100%;
+    @include respond-to("xl"){
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.info{
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    .title{
+        margin-bottom: 60px;
+    }
+    .phone{        
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 39px;
+    }
+    .address{
+        margin-top: 30px;
+    }
+    &>a{
+        display: block;
+    }
+}
+
+.map{
+    width: 100%; 
+    iframe{
+        aspect-ratio: 1;
+        border: none;
+        @include respond-to("md"){
+            aspect-ratio: 16/9;
+        }
+    }
+}

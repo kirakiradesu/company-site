@@ -1,0 +1,39 @@
+@import 'vendors/normalize';
+@import 'vendors/libs';
+// @import "/node_modules/swiper/swiper";
+
+@import "themes/_default";
+
+@import "helpers/vars";
+@import "helpers/mixins";
+@import "helpers/functions";
+
+@import "base/_reset";
+@import "base/fonts";
+@import "base/typography";
+
+@import "layout/header";
+@import "layout/footer";
+
+@import "pages/index";
+@import "pages/company";
+@import "pages/games";
+@import "pages/career";
+@import "pages/news";
+@import "pages/contacts";
+
+@import "components/icons";
+@import "components/nav";
+@import "components/btn";
+@import "components/swiper";
+@import "components/social";
+@import "components/modal";
+
+
+html,
+body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}

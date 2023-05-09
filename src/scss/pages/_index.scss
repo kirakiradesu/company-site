@@ -1,0 +1,88 @@
+.content{
+    // height: 100%;
+}
+
+.section{
+    &.main{
+        background: linear-gradient(to right,#fff,#fff 94px,theme-color("bg-color-2") 94px);
+        @include respond-to("xl"){
+            background: linear-gradient(to right,#fff,#fff 195px,theme-color("bg-color-2") 195px);
+        }
+    }
+        
+    // height: 100%;
+    padding: 120px 14px 90px;
+
+    @include respond-to("md"){
+        padding: 120px 90px 54px 95px;
+    }
+    @include respond-to("xl"){
+        padding: 120px 0 54px 140px;        
+    }
+}
+
+.main-inner{
+    display: grid;
+    grid-template-areas: 
+    "title"
+    "img"
+    "info";
+
+    @include respond-to("md"){
+        grid-template-areas: 
+        "title"
+        "info"
+        "img";
+    }
+    @include respond-to("xl"){
+        grid-template-areas: 
+        "title img"
+        "info img";
+    }
+    .title{
+        grid-area: title;
+    }
+
+    .img{
+        grid-area: img;
+
+        width: 345px;
+        @include respond-to("md"){
+            width: 100%;
+            text-align: center;
+        }
+        @include respond-to("xl"){
+            width: 786px;
+        }
+    }
+
+    .info{
+        grid-area: info;
+        margin-top: 70px;
+        
+        @include respond-to("md"){
+            margin-top: 25px;
+            display: flex;
+        }
+        @include respond-to("xl"){
+            padding-left: 100px;
+        }
+        p{
+            margin-top: 25px;
+            
+            @include respond-to("md"){
+                margin-left: 66px;
+                width: 50%;
+            }
+        }
+    }
+}
+
+.main-img{
+    @include respond-to("md"){
+    }
+    @include respond-to("xl"){
+        margin-left: -50px;
+    }
+}
+

@@ -1,0 +1,24 @@
+.social{
+    position: fixed;
+    top: 60%;
+
+    display: none;
+    flex-direction: column;
+
+    z-index: 9;
+    @include respond-to("md"){
+        display: flex;
+        left: 32px;
+    }
+    @include respond-to("xl"){
+        display: flex;
+        left: 75px;
+    }
+
+    .social__item{
+         margin-bottom: 25px;
+         width: 32px;
+         height: 32px;
+
+    }
+}

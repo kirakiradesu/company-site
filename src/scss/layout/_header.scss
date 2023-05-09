@@ -1,0 +1,40 @@
+html:not([data-scroll='0']) .header {
+    background-color: #fff;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: background-color 0.5s ease-in;
+}
+
+.header-inner{
+    height: 90px;
+    padding-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    @include respond-to("md"){
+        height: 120px;
+    }
+}
+
+.logo{
+    min-width: 135px;
+}
+
+.lang{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: theme-color("btn-color");
+    height: 100%;
+    aspect-ratio: 1;
+    color: theme-color("btn-text-color");
+    font-size: 20px;    
+    font-weight: 700;    
+    text-transform: uppercase;
+}

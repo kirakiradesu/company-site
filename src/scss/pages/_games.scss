@@ -1,0 +1,126 @@
+.section{
+    &.games{
+        background: linear-gradient(
+            to right,
+            #FAFAFA,
+            #FAFAFA 94px,
+            #D3D1E9 94px
+          );
+          @include respond-to("md") {
+            padding-left: 120px;
+          }
+          @include respond-to("xl") {
+            background: linear-gradient(
+              to right,
+              #FAFAFA,
+              #FAFAFA 45%,
+              #D3D1E9 45%
+            );
+          }
+    }
+    &.games-list{
+        background-color:#FAFAFA;
+    }
+    &.games-list{
+        @include respond-to("md") {
+            padding-left: 120px;
+          }
+    }
+
+}
+
+.games{
+    display: flex;
+    
+    align-items: center;
+   .games-inner{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        row-gap: 40px;
+        @include respond-to("md") {
+            flex-direction: row;
+        }
+        &>div{
+            width: 100%;
+            @include respond-to("md") {
+                width: 41%;
+            }
+        }
+    }
+    
+    &__info{        
+        .title{
+            margin-bottom: 37px;
+        }
+        p{
+            margin-bottom: 43px;
+        }
+    }
+
+    &__img{
+        text-align: center;
+        @include respond-to("md") {
+            text-align: unset;
+        }
+    }
+}
+.game-item{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 120px;  
+    @include respond-to("md") {
+        flex-direction: row;
+    }  
+    @include respond-to("xl") {
+        padding-right: 150px;        
+    }
+
+    &>div{
+        width: 100%;
+        @include respond-to("md") {
+            
+            width: 48%;
+        } 
+    }
+    &__info{
+        padding-bottom: 25px;
+    }
+    .title{
+        font-family: ZonaPro, sans-serif;
+        font-weight: 800;
+        font-size: 32px;
+        text-transform: uppercase; 
+        margin-bottom: 22px;
+        @include respond-to("md") {
+            font-size: 64px;
+        }
+        @include respond-to("xl") {
+            font-size: 72px;
+        }
+    }
+    p{
+        margin-bottom: 60px;
+    }
+
+    &--reverse{ 
+        @include respond-to("md") {            
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+.projects{
+    .title{
+        @include respond-to("xl") {
+            margin-top: 64px;
+        }
+    }
+
+    .team-item__text{
+        margin-bottom: 25px;
+    }
+    
+}

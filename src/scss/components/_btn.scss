@@ -1,0 +1,74 @@
+.btn{
+    position: relative;
+    display: block;
+    background-color: theme-color("btn-color");
+    color: theme-color("btn-text-color");
+    font-size: 22px;
+    font-weight: 800;
+
+    width: 192px;
+    height: 94px;
+
+    &__next{
+        padding: 30px 15px;
+        text-align: center;
+        &:after{
+            position: absolute;
+            content: "";
+            left: 50%;
+            bottom: 10px;
+            width: 90px;
+            height: 15px;
+            transform: translateX(-50%);
+            background-image: url("../img/Arrow.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &--slime{
+            width: 219px;
+            height: 75px;
+            padding: 20px;
+        }
+    }
+    &__prev{
+        padding: 30px 15px;
+        text-align: center;
+        &:after{
+            position: absolute;
+            content: "";
+            left: 50%;
+            bottom: 10px;
+            width: 90px;
+            height: 15px;
+            transform: translateX(-50%) rotate(180deg);
+            background-image: url("../img/Arrow.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+    &__scroll-down{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        padding: 20px;
+        padding-right: 30px;
+        &:after{
+            position: absolute;
+            content: "";
+            right: 10px;
+            top: 50%;
+            width: 40px;
+            height: 15px;
+            transform:translate(0, -50%) rotate(90deg);
+            background-image: url("../img/Arrow.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+    &--sqr{
+        height: 120px;
+        width: 120px;
+        // aspect-ratio: 1/1;
+    }
+}

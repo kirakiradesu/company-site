@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" data-scroll="0">
+  @@include("html/head.html", { "title": "Главная" })
+  <body>
+    @@include("html/header.html", {}) 
+    @@include("html/social.html", {})
+    <!-- Slider main container -->
+    <!-- <div class="content"> -->
+      <section class="section main">
+        <div class="main-inner">
+          <div class="title">
+            <h1 class="animate__animated animate__fadeInDown">
+              Мы создаем мобильные игры, в которые ты играешь
+            </h1>
+          </div>
+          <div class="img">
+            <img src="@img/home-bg.png" class="main-img" alt="main img" />
+          </div>
+          <div class="info">
+            <a href="./company.html" class="btn btn__next btn--sqr">
+              Узнать подробнее
+            </a>
+            <p>
+              «Оригинальные идеи, качество реализации игровых механик и внимание
+              к деталям интерфейса - наши основные принципы.»
+            </p>
+          </div>
+        </div>
+      </section>
+      @@include("html/footer.html", {})
+    <!-- </div> -->
+
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

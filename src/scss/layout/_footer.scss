@@ -1,0 +1,52 @@
+.footer{
+    position: initial;
+    bottom: 0;
+    left: 0;
+    height: 54px;
+    width: 100%;
+    background-color: #EFEFEF;
+    color: #7E7E7E;
+
+    z-index: 10;
+    @include respond-to("md"){
+                
+    }
+    @include respond-to("xl"){
+        position: fixed;           
+    }
+
+    &__nav{
+        flex-grow: 2;
+        display: none;
+        @include respond-to("md"){
+            display: block;           
+        }
+    }
+    &__menu{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin: 0 auto;
+        @include respond-to("lg"){
+            width: 50%;           
+        }
+    }
+
+    .menu{
+        &__item{
+            a{
+                color: #7E7E7E;
+            }
+        }
+    }
+}
+
+.footer-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;    
+    height: 54px;
+    padding: 0 20px;
+}
+
+

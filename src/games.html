@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" data-scroll="0">
+
+@@include("html/head.html", {
+    "title": "Игры"
+})
+<body>
+<a id="overlay" class="overlay" href="#"></a>
+    @@include("html/header.html", {})
+    @@include("html/social.html", {})
+    <!-- <div class="content"> -->
+ <!-- Slider main container -->
+<div class="swiper ">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper --mobile-vertical">
+      <!-- Slides -->
+      <div class="swiper-slide section games">
+        <div class="games-inner">
+          <div class="games__info">
+            <h2 class="title">Игры</h2>
+            <p>Toy.Stream сегодня — это команда из более 500 человек и офисы по всему миру. Мы входим в топ-10 игровых разработчиков по установкам — общее количество загрузок перевалило за 2 млрд, а ежемесячная аудитория составляет более 250 млн игроков.
+
+                В разработке у нас всегда находится более десяти проектов одновременно. Мы постоянно экспериментируем, ищем новые тренды и пробуем себя в новых жанрах.
+            </p>
+            <a href="#" class="btn btn__scroll-down">
+                Смотреть наши работы
+            </a>
+          </div>
+          <div class="games__img">
+                <img src="@img/game-bg.png" alt="game">
+          </div>
+          
+        </div>
+      </div>
+    <div id="games" class="swiper-slide section games-list swiper-scrollbar">
+        <div class="games-list-inner">
+            <div class="game-list__item game-item">
+                <div class="game-item__info">
+                    <div class="title">Design Masters</div>
+                    <p>
+                        Станьте дизайнером интерьеров!<br>
+Проходите уровни матч-3, создавайте собственные дизайны и интерьеры, следите за историей и знакомьтесь с персонажами.
+                    </p>
+                    <a href="#g1" class="btn btn__next modal__toggle-btn">Подробнее</a>
+                </div>
+                <div class="game-item__img">
+                    <img src="@img/game-screenshot1.png" alt="game">
+                </div>
+            </div>
+            <div class="game-list__item game-item game-item--reverse">
+                <div class="game-item__info">
+                    <div class="title">Perfect Makeup 3D
+                    </div>
+                    <p>Perfect Makeup 3D<br>
+                        Добро пожаловать в мир макияжа!
+                        <br>
+                        Выбирайте кисти, цвета и оттенки губной помады, подводки для глаз и пудры, чтобы добиться превосходного результата.
+                        
+                        </p>
+                    <a href="#g2" class="btn btn__next modal__toggle-btn">Подробнее</a>
+                </div>
+                <div class="game-item__img">
+                    <img src="@img/game-screenshot2.png" alt="game">
+                </div>
+            </div>
+            <div class="game-list__item game-item">
+                <div class="game-item__info">
+                    <div class="title">Escape Masters</div>
+                    <p>Совершите идеальный побег!
+<br>
+                        Спаси напарников, собери сокровища и прокопай путь к свободе, но опасайся ловушек.
+                        
+                        </p>
+                    <a href="#g3" class="btn btn__next modal__toggle-btn">Подробнее</a>
+                </div>
+                <div class="game-item__img">
+                    <img src="@img/game-screenshot3.png" alt="game">
+                </div>
+            </div>
+            <div class="game-list__item game-item">
+                <div class="game-item__info">
+                    <div class="title">Hitmasters</div>
+                    <p>Стань стрелком и срази всех врагов!
+<br>
+                        Целься метко, используй объекты на уровнях и не дай никому спастись! Открывай новое оружие, пополняй свой арсенал и проходи головоломки.</p>
+                    <a href="#g4" class="btn btn__next modal__toggle-btn">Подробнее</a>
+                </div>
+                <div class="game-item__img">
+                    <img src="@img/game-screenshot4.png" alt="game">
+                </div>
+            </div>
+        </div>
+    </div>
+      <div class="swiper-slide section projects">
+        <div class="team-inner">
+          <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          <div class="title">
+            <h2>Последние проекты</h2>            
+          </div>          
+          <div class="swiper-h">
+            
+            <div class="swiper-wrapper team-swiper ">
+            <div class="swiper-slide team-item team__item">
+              <div class="team-item__img">
+                <img src="@img/game-screenshot1.png" alt="team">
+              </div>
+              <div class="team-item__name">
+                Design Masters
+              </div>
+              <div class="team-item__spot">
+                Станьте дизайнером интерьеров!
+              </div>
+              <div class="team-item__text">
+                
+
+                Проходите уровни матч-3, создавайте собственные дизайны и интерьеры, следите за историей и знакомьтесь с персонажами.
+              </div>
+              <a href="#g1" class="btn btn__next btn__next--slime modal__toggle-btn">Подробнее</a>
+            </div>
+            <div class="swiper-slide team-item team__item">
+              <div class="team-item__img">
+                <img src="@img/game-screenshot2.png" alt="team">
+              </div>
+              <div class="team-item__name">
+                Perfect Makeup 3D
+
+              </div>
+              <div class="team-item__spot">
+                Добро пожаловать в мир макияжа!
+              </div>
+              <div class="team-item__text">
+Выбирайте кисти, цвета и оттенки губной помады, подводки для глаз и пудры, чтобы добиться превосходного результата.
+
+
+              </div>
+              <a href="#g2" class="btn btn__next btn__next--slime modal__toggle-btn">Подробнее</a>
+            </div>
+            <div class="swiper-slide team-item team__item">
+              <div class="team-item__img">
+                <img src="@img/game-screenshot3.png" alt="team">
+              </div>
+              <div class="team-item__name">
+                Escape Masters
+            </div>
+              <div class="team-item__spot">
+                Совершите идеальный побег!
+              </div>
+              <div class="team-item__text">
+                
+
+Спаси напарников, собери сокровища и прокопай путь к свободе, но опасайся ловушек.
+
+
+              </div>
+              <a href="#g3" class="btn btn__next btn__next--slime modal__toggle-btn">Подробнее</a>
+            </div>
+            <div class="swiper-slide team-item team__item">
+              <div class="team-item__img">
+                <img src="@img/game-screenshot4.png" alt="team">
+              </div>
+              <div class="team-item__name">
+                Hitmasters
+              </div>
+              <div class="team-item__spot">
+                Стань стрелком и срази всех врагов!
+              </div>
+              <div class="team-item__text">
+                Целься метко, используй объекты на уровнях и не дай никому спастись! Открывай новое оружие, пополняй свой арсенал и проходи головоломки.
+              
+              </div>
+              <a href="#g4" class="btn btn__next btn__next--slime modal__toggle-btn">Подробнее</a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <!-- If we need pagination -->
+    
+  
+    <!-- If we need navigation buttons -->
+    <!-- <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+   -->
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+    <div class="swiper-pagination"></div>
+    @@include("html/footer.html", {})
+</div>
+
+<div class="modal" id="g1">
+  <a class="modal__close-btn modal__toggle-btn" href="#"></a>
+  <div class="modal__info">
+    <div class="title">Design Masters</div>
+    <p>Станьте дизайнером интерьеров!
+      <br>
+      Проходите уровни матч-3, создавайте собственные дизайны и интерьеры, следите за историей и знакомьтесь с персонажами.</p>
+  </div>
+  <div class="modal__info">
+    <img src="@img/game-screenshot1.png" alt="screenshot">
+    <div class="links">
+      <a href="#">
+        <img src="@img/google-play-btn.png" alt="google link">
+      </a>
+      <a href="#">
+        <img src="@img/app-store-btn.png" alt="app store link">
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="g2">
+  <a class="modal__close-btn modal__toggle-btn" href="#"></a>
+  <div class="modal__info">
+    <div class="title">Perfect Makeup 3D
+    </div>
+    <p>Perfect Makeup 3D <br>
+      Добро пожаловать в мир макияжа!
+      <br>
+      Выбирайте кисти, цвета и оттенки губной помады, подводки для глаз и пудры, чтобы добиться превосходного результата.
+      
+      </p>
+  </div>
+  <div class="modal__info">
+    <img src="@img/game-screenshot2.png" alt="screenshot">
+    <div class="links">
+      <a href="#">
+        <img src="@img/google-play-btn.png" alt="google link">
+      </a>
+      <a href="#">
+        <img src="@img/app-store-btn.png" alt="app store link">
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="g3">
+  <a class="modal__close-btn modal__toggle-btn" href="#"></a>
+  <div class="modal__info">
+    <div class="title">Escape Masters
+    </div>
+    <p>Совершите идеальный побег!
+<br>
+      Спаси напарников, собери сокровища и прокопай путь к свободе, но опасайся ловушек.
+      
+      </p>
+  </div>
+  <div class="modal__info">
+    <img src="@img/game-screenshot3.png" alt="screenshot">
+    <div class="links">
+      <a href="#">
+        <img src="@img/google-play-btn.png" alt="google link">
+      </a>
+      <a href="#">
+        <img src="@img/app-store-btn.png" alt="app store link">
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="g4">
+  <a class="modal__close-btn modal__toggle-btn" href="#"></a>
+  <div class="modal__info">
+    <div class="title">Hitmasters
+    </div>
+    <p>Стань стрелком и срази всех врагов!
+<br>
+      Целься метко, используй объекты на уровнях и не дай никому спастись! Открывай новое оружие, пополняй свой арсенал и проходи головоломки.
+    </p>
+  </div>
+  <div class="modal__info">
+    <img src="@img/game-screenshot4.png" alt="screenshot">
+    <div class="links">
+      <a href="#">
+        <img src="@img/google-play-btn.png" alt="google link">
+      </a>
+      <a href="#">
+        <img src="@img/app-store-btn.png" alt="app store link">
+      </a>
+    </div>
+  </div>
+</div>
+<script src="js/app.min.js"></script>
+</body>
+</html>

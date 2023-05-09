@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" data-scroll="0">
+  @@include("html/head.html", { "title": "Главная" })
+  <body>
+    <a href="#" id="overlay" class="overlay"></a>
+    @@include("html/header.html", {}) 
+    @@include("html/social.html", {})
+    <!-- Slider main container -->
+    <!-- <div class="content"> -->
+      <section class="section vacancy">
+        <div class="vacancy-inner">
+            <a href="career.html" class="btn btn__prev">Назад</a>
+          <div class="title">
+            <h2 class="animate__animated animate__fadeInDown">
+                User Acquisition Manager
+            </h2>
+          </div>
+          
+            <p>
+                Мы хотим, чтобы наши игры увидели как можно больше пользователей. Для усиления
+                команды продвижения игр нам нужен User Acquisition Manager, который знает
+                последние новинки мобильных игр и рекламных трендов.
+                <br>
+                <br>
+                <b>Чем предстоит заниматься</b>
+                <br>
+                • Заводить кампании на Facebook, Google и работать с рекламными сетями;
+                • Анализировать и оптимизировать кампании на основе собираемых метрик;
+                • Предлагать идеи для креативов и тестировать их;
+                • Держать руку на пульсе событий, исследовать рынок и плотно работать с креативной командой.
+                • Проводить эксперименты, A/B тестирования и их анализ
+                • Формировать пул идей по креативам
+                • Оперативно тестировать, анализировать результаты и проводить рефлексию.
+                <br>
+                <br>
+                <b>Ключевые требования</b>
+                <br>
+                • От 1 года аналогичного опыта с белыми мобильными приложениями
+                • Опыт работы с Facebook и Google Ads
+                • Upper-intermediate english
+                • Желание развиваться в игровом маркетинге
+                • Умение объяснить: LTV, ROI, ROAS, CPA\CPI\CPM и т.д.
+                • Аналитический склад ума
+                • Умение работать в команде
+                • Личный игровой опыт
+                • Умение решать сложные аналитические кейсы, ставить задачи (какие данные
+                необходимы и достаточны, в каких разрезах, какую гипотезу решаем);
+                • Умение работать с big data соответствующими инструментами (tableau, power pivot от
+                Excel и другие)
+                • Интерес к GameDev
+                • Высшее образование (техническое — будет плюсом)
+                <br>
+                <br>
+                <b>Мы предлагаем</b>
+                <br>
+                • Новый офис в Москва Сити с бесконечным кофе и печеньками
+                • Молодую команду увлеченных игровой индустрией профессионалов
+                • Возможность реализовывать собственные идеи
+                • Конкурентную заработную плату
+                • Долю дохода от реализованных проектов
+                • Профессиональный рост, участие в профильных конференциях, курсах и других
+                мероприятиях по всему миру
+                • Поддержку важных жизненных событий
+                • Медицинскую страховку, оплату занятий спортом и другие бонусы
+            </p>
+        </div>
+      </section>
+      <section class="section form">
+        <div class="form-inner">
+            <h2 class="title">Напишите<br>нам</h2>
+            <form action="#success">
+                <div class="form__component">
+                    <input type="text" placeholder="ФИО">
+                </div>
+                <div class="form__component">
+                    <input type="email" placeholder="Электронная почта">
+                </div>
+                <div class="form__component">
+                    <input type="text" placeholder="Телефон">
+                </div>
+                <div class="form__component">
+                    <label class="input-file">
+                        <input class="docpicker" type="file"  accept="image/*,.pdf, .doc, .docx">
+                        <span class="placeholder">Прикрепить резюме</span>
+                        <div class="input-file__text"></div>
+                    </label>
+                    
+                </div>
+                <div class="form__component">
+                    <label class="input-file">
+                        <input class="docpicker" type="file" multiple>
+                        <span class="placeholder">Прикрепить дополнительный файлы</span>
+                        <div class="input-file__text"></div>
+                    </label>
+                </div>
+                <div class="form__component">
+                    <!-- <input type="texta" placeholder="Дополнительный комментарии"> -->
+                    <textarea cols="auto" rows="1" placeholder="Дополнительный комментарии"></textarea>
+                </div>
+                <div class="form__actions">
+                    <button type="submit" class="btn btn__next modal__toggle-btn">Отправить</button>
+                    <label class="form__checkbox">
+                        Я соглашаюсь с Правилами пользования
+                            и Политикой конфиденциальности.
+                        <input type="checkbox" name="policy">
+                        <span class="checkmark"></span>
+                        
+                    </label>
+                    
+                </div>
+            </form>
+        </div>
+      </section>
+      <div class="modal" id="success">
+        <a class="modal__close-btn modal__toggle-btn" href="#"></a>
+        <div class="modal__alert">
+            <img src="@img/flag.png" alt="flag icon">
+          <div class="title">Спасибо за сообщение</div>
+          <p>Мы скоро свяжемся с вами для уточнения деталей</p>
+        </div>
+      </div>
+      @@include("html/footer.html", {})
+    <!-- </div> -->
+
+    <script src="js/app.min.js"></script>
+    <script>
+        let inputFiles = document.getElementsByClassName("input-file");
+        for(let i of inputFiles){
+            let input = i.getElementsByTagName("input");
+            let placeholder = i.getElementsByTagName("span");
+            let output = i.getElementsByTagName("div");
+
+            
+
+            input[0].addEventListener("change", (event) => {
+                let fileNames = Array.from(event.target.files).map((e)=> e.name);
+                if(fileNames){
+                    output[0].textContent = fileNames.join();
+                    placeholder[0].classList.toggle("hide");
+                }else{
+                    output[0].textContent = "";
+                    placeholder[0].classList.toggle("hide");
+                }
+                
+
+
+
+                // for (let file of files) {
+                //     let li = document.createElement("li");
+                //     li.textContent = file.name;
+                //     output.appendChild(li);
+                // }
+            })
+        }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,172 @@
+.section {
+  &.company {
+    background: linear-gradient(
+      to right,
+      #fff,
+      #fff 94px,
+      theme-color("bg-color-2") 94px
+    );
+    @include respond-to("md") {
+      padding-left: 120px;
+    }
+    @include respond-to("xl") {
+      background: linear-gradient(
+        to right,
+        #fff,
+        #fff 45%,
+        theme-color("bg-color-2") 45%
+      );
+    }
+  }
+  &.team {
+    background: unset;
+    @include respond-to("md") {
+      padding-left: 120px;
+    }
+    @include respond-to("xl") {
+      background: linear-gradient(
+        to right,
+        theme-color("bg-color-2"),
+        theme-color("bg-color-2") 55%,
+        #fff 55%
+      );
+    }
+  }
+}
+
+.company {
+  &__info {
+    margin-top: 95px;
+    margin-bottom: 120px;
+    .title {
+      margin-bottom: 37px;
+    }
+  }
+  &__stat {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+  width: 50%;
+  margin-bottom: 60px;
+
+  @include respond-to("xl") {
+    align-items:start;
+  }
+  &__title {
+    font-family: Akrobat, sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    @include respond-to("md") {
+      font-size: 44px;
+    }
+  }
+  &__text {
+    font-family: Akrobat, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color:#646464;
+    @include respond-to("md") {
+      font-size: 24px;
+    }
+  }
+  &__img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85px;
+    width: 85px;
+    background-color: #e8d935;
+    @include respond-to("md"){
+      height: 137px;
+      width: 137px;
+    }
+    &:before{
+        position: absolute;
+        top: -25px;
+        right: -25px;
+        content:"";
+        height: 85px;
+        width: 85px;
+        background-color: #F2E33A;
+        z-index: -1;
+        @include respond-to("md"){
+          height: 137px;
+          width: 137px;
+        }
+    }
+    img{
+      max-width: 90%;
+      max-height: 90%;
+    }
+  }
+}
+
+.company-inner {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  @include respond-to("xl"){
+    flex-direction: row;
+    }
+  p {
+    a {
+      color: theme-color("btn-color");
+      text-decoration: underline;
+    }
+  }
+  > div {
+
+    @include respond-to("xl"){
+        width: 41%;
+    }
+  }
+}
+
+.team{
+  
+}
+.team-inner{
+  position: relative;
+  height: 100%; 
+  padding-bottom: 130px;
+  @include respond-to("md"){
+    padding-bottom: 0;
+  }
+  @include respond-to("xl"){
+    padding-right: 150px;
+  }
+  overflow: hidden;
+  .title{
+   
+    margin-bottom: 28px;
+  }
+}
+.team-swiper{  
+  display: flex;
+  justify-content: space-between;
+}
+.team-item{
+  font-size: 20px;
+  font-weight: 600;
+  @include respond-to("xl"){
+    width: 20%;
+}
+  &__name{
+    font-size: 32px;
+    font-weight: 800;
+  }
+  &__spot{
+  }
+  &__text{
+    margin-top: 25px;
+    color:#646464;
+  }
+}
