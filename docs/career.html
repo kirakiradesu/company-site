@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.6/jquery.pagepiling.min.css?_v=20230509124148" />
-    <link rel="stylesheet" href="css/style.min.css?_v=20230509124148">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.6/jquery.pagepiling.min.css?_v=20230509132738" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20230509132738">
     <title>Игры</title>
 </head>
 <body>
@@ -92,8 +92,8 @@
                 Вакансии
             </a>
           </div>
-          <div class="games__img">
-                <picture><source srcset="img/light-off-bg.webp" type="image/webp"><img src="img/light-off-bg.png" alt="bg"></picture>
+          <div class="games__img career-bg">
+                <picture><source srcset="img/light-off-bg.webp" type="image/webp"><img id="pic" onmouseout="changePic1()" onmouseover="changePic2()" src="img/light-off-bg.png" alt="bg"></picture>
           </div>
           
         </div>
@@ -239,6 +239,18 @@
     </div>
 </footer>
 </div>
-<script src="js/app.min.js?_v=20230509124148"></script>
+<script src="js/app.min.js?_v=20230509132738"></script>
+<script>
+  let pic = document.getElementById("pic");
+  let bg = document.querySelector(".games");
+  function changePic1(){
+    pic.src="img/light-off-bg.png";
+    bg.classList.toggle("games--light-on");
+  }
+  function changePic2(){
+    pic.src="img/light-on-bg.png";
+    bg.classList.toggle("games--light-on");
+  }
+</script>
 </body>
 </html>

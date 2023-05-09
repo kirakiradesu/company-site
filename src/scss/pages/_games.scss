@@ -5,7 +5,7 @@
             #FAFAFA,
             #FAFAFA 94px,
             #D3D1E9 94px
-          );
+        );
           @include respond-to("md") {
             padding-left: 120px;
           }
@@ -16,6 +16,25 @@
               #FAFAFA 45%,
               #D3D1E9 45%
             );
+          }
+          &--light-on{
+            background: linear-gradient(
+                to right,
+                #fff,
+                #fff 94px,
+                theme-color("bg-color-2") 94px
+              );
+              @include respond-to("md") {
+                padding-left: 120px;
+              }
+              @include respond-to("xl") {
+                background: linear-gradient(
+                  to right,
+                  #fff,
+                  #fff 45%,
+                  theme-color("bg-color-2") 45%
+                );
+              }
           }
     }
     &.games-list{

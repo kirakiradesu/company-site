@@ -1,27 +1,12 @@
 .contacts{
     height: auto;
-    @include respond-to("xl"){
-        height: 100%;
-    }
-}
-.contacts-inner{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
-    row-gap: 70px;
-    column-gap: 80px;
-    height: 100%;
-    @include respond-to("xl"){
-        flex-direction: row;
-        align-items: center;
-    }
-}
-
-.info{
     font-family: Montserrat, sans-serif;
     font-weight: 500;
     font-size: 22px;
+
+    @include respond-to("xl"){
+        height: 100%;
+    } 
     .title{
         margin-bottom: 60px;
     }
@@ -35,6 +20,19 @@
     }
     &>a{
         display: block;
+    }
+}
+.contacts-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    row-gap: 70px;
+    column-gap: 80px;
+    height: 100%;
+    @include respond-to("xl"){
+        flex-direction: row;
+        align-items: center;
     }
 }
 

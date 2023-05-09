@@ -26,8 +26,8 @@
                 Вакансии
             </a>
           </div>
-          <div class="games__img">
-                <img src="@img/light-off-bg.png" alt="bg">
+          <div class="games__img career-bg">
+                <img id="pic" onmouseout="changePic1()" onmouseover="changePic2()" src="@img/light-off-bg.png" alt="bg">
           </div>
           
         </div>
@@ -138,5 +138,17 @@
     @@include("html/footer.html", {})
 </div>
 <script src="js/app.min.js"></script>
+<script>
+  let pic = document.getElementById("pic");
+  let bg = document.querySelector(".games");
+  function changePic1(){
+    pic.src="@img/light-off-bg.png";
+    bg.classList.toggle("games--light-on");
+  }
+  function changePic2(){
+    pic.src="@img/light-on-bg.png";
+    bg.classList.toggle("games--light-on");
+  }
+</script>
 </body>
 </html>
