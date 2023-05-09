@@ -140,15 +140,24 @@
 <script src="js/app.min.js"></script>
 <script>
   let pic = document.getElementById("pic");
+  let src = pic.parentNode.querySelector("source");
   let bg = document.querySelector(".games");
-  function changePic1(){
-    pic.src="@img/light-off-bg.png";
-    bg.classList.toggle("games--light-on");
-  }
-  function changePic2(){
-    pic.src="@img/light-on-bg.png";
-    bg.classList.toggle("games--light-on");
-  }
+function changePic1(){
+      pic.src="@img/light-off-bg.png";
+      bg.classList.toggle("games--light-on");
+
+      if(src){
+        src.srcset = "@img/light-off-bg.png";
+      }
+    }
+    function changePic2(){
+      pic.src="@img/light-on-bg.png";
+      bg.classList.toggle("games--light-on");
+
+      if(src){
+        src.srcset = "@img/light-on-bg.png";
+      }
+    }
 </script>
 </body>
 </html>

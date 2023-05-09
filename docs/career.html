@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.6/jquery.pagepiling.min.css?_v=20230509132738" />
-    <link rel="stylesheet" href="css/style.min.css?_v=20230509132738">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.6/jquery.pagepiling.min.css?_v=20230509141641" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20230509141641">
+    <link rel="icon" href="https://toy.stream/wp-content/uploads/2021/06/favicon.ico">
     <title>Игры</title>
 </head>
 <body>
@@ -239,18 +240,27 @@
     </div>
 </footer>
 </div>
-<script src="js/app.min.js?_v=20230509132738"></script>
+<script src="js/app.min.js?_v=20230509141641"></script>
 <script>
   let pic = document.getElementById("pic");
+  let src = pic.parentNode.querySelector("source");
   let bg = document.querySelector(".games");
-  function changePic1(){
-    pic.src="img/light-off-bg.png";
-    bg.classList.toggle("games--light-on");
-  }
-  function changePic2(){
-    pic.src="img/light-on-bg.png";
-    bg.classList.toggle("games--light-on");
-  }
+function changePic1(){
+      pic.src="img/light-off-bg.png";
+      bg.classList.toggle("games--light-on");
+
+      if(src){
+        src.srcset = "img/light-off-bg.png";
+      }
+    }
+    function changePic2(){
+      pic.src="img/light-on-bg.png";
+      bg.classList.toggle("games--light-on");
+
+      if(src){
+        src.srcset = "img/light-on-bg.png";
+      }
+    }
 </script>
 </body>
 </html>
